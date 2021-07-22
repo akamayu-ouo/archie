@@ -1,0 +1,24 @@
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"> </script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/lite.render.js"> </script>
+<style>
+.vizsvg {
+    max-width: 85%;
+    max-height: none;
+    border-radius: 1em;
+    display: block;
+    margin: auto;
+};
+</style>
+<script type="text/javascript">
+    var viz = new Viz();
+    let vizPrefix = "graphviz";
+    let vizSelector =  "code[class=language-"+ vizPrefix +"]";
+    Array.prototype.forEach.call(document.querySelectorAll(vizSelector)
+            , function(x){
+                    viz.renderSVGElement(x.innerText)
+                        .then(function(svg){
+                                svg.classList.add("vizsvg");
+                                x.parentNode.parentNode.replaceChild(svg, x.parentNode);
+                         });
+                });
+</script>

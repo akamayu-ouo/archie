@@ -1,6 +1,7 @@
 {{ define "main" }}
 <main>
 	<article>
+
 		<div class="title">
 			<h1 class="title">{{ .Title }}</h1>
 			<div class="meta">Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
@@ -28,6 +29,12 @@
 			{{ end }}
 			{{ end }}
 		</div>
+        {{ if gt .Params.plugins 0 }}
+            {{ range .Params.plugins }}
+                {{ $path := . | printf "plugins/%s.html"}}
+                {{ partial $path }}
+            {{ end }}
+        {{ end }}
 	</article>
 </main>
 {{ end }}
