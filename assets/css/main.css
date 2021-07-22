@@ -101,6 +101,7 @@ figure h4::before {
 code {
   background-color: #f1f1f1;
   padding: .1em .2em;
+  border-radius: .25em;
 }
 
 pre {
@@ -209,11 +210,11 @@ justify-content: space-between;
   content: "🏷 ";
 }
 .tags a{
-  border-bottom: 3px solid var(--maincolor); 
+  border-bottom: 3px solid var(--maincolor);
 }
 .tags a:hover{
   color:white;
-  background-color: var(--hovercolor); 
+  background-color: var(--hovercolor);
 }
 svg{
   max-height: 15px;
@@ -221,7 +222,7 @@ svg{
 .soc:hover{
   color: white;
 }
-.draft-label{ 
+.draft-label{
     color: var(--bordercl);
     text-decoration: none;
     padding: 2px 4px;
@@ -272,7 +273,7 @@ color:white
 .highlight pre code[class*='language-json']::before{
 content: 'json';
 background: dodgerblue;
- color: #000000 
+color: #000000
 }
 .highlight pre code[class*='language-python']::before,
 .highlight pre code[class*='language-py']::before {

@@ -19,9 +19,9 @@ hr {
   border-top: 3px dotted blue;
 }
 code {
-  background-color: lightblue;
-  color: black;
-  text-decoration: bold;
+  background-color: #353840;
+  color: white;
+  text-decoration: auto;
   padding: 0.1em 0.2em;
 }
 pre {
@@ -133,7 +133,7 @@ a:hover {
 .highlight pre code[class*='language-json']::before{
   content: 'json';
   background: dodgerblue;
-   color: #000000 
+   color: #000000
 }
 .highlight pre code[class*='language-python']::before,
 .highlight pre code[class*='language-py']::before {
